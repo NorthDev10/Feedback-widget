@@ -1,0 +1,262 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #00796B;
+}
+
+.logo, .logo:hover, .logo:focus {
+    color: white;
+    font-size: 24px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.form-signin {
+  max-width: 600px;
+  padding: 15px;
+  margin: 100px auto;
+}
+
+.form-signin-heading, .loginInOr {
+  color: white;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+a.vk-sign,
+a.gplus-sign {
+  display: inline-block;
+  position: relative;
+  background-color: #FFF;
+  border-radius: 5px 3px 3px 5px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 100;
+  line-height: 30pt;
+  margin-bottom: 20px;
+  min-width: 190px;
+  text-decoration: none;
+}
+
+.vk-icon {
+  background-color: #006399;
+  background-image: url(/img/sprite.png);
+  background-position: 0 -2px;
+}
+
+.vk-sign:hover {
+  background-color: #476BB3;
+}
+
+.vk-sign:active {
+background-color: #3E5D9C;
+}
+.gplus-icon {
+  background-color: #FF472F;
+  background-image: url(/img/sprite.png);
+  background-position: 36px 0;
+}
+
+a.vk-sign {
+  color: #476BB3;
+}
+
+a.gplus-sign {
+  color: #DC4A38;
+}
+
+.gplus-sign:hover {
+  background-color: #DC4A38;
+}
+
+.gplus-sign:active {
+  background-color: #C14131
+}
+
+.vk-sign:hover,
+.gplus-sign:hover, .vk-sign:active,
+.gplus-sign:active {
+  color: #fff;
+}
+
+.social-buttons {
+  list-style: none;
+  margin-top: 55px;
+  margin-left: -22px;
+}
+
+.social-buttons li {
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+    .social-buttons {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 15px;
+    }
+    
+    .social-buttons li:first-child {
+        margin-right: 10px;
+    }
+    
+    a.vk-sign, a.gplus-sign {
+        min-width: 135px;
+    }
+    
+    span.loginInOr {
+      position: relative;
+      top: 7px;
+    }
+    
+    span.loginInOr::before {
+      width: 120px;
+      height: 0;
+      border-left: 0;
+      border-top: 1px solid #fff;
+      top: 8px;
+      left: -130px;
+      content: ' ';
+    }
+    
+    span.loginInOr::after {
+      width: 120px;
+      height: 0;
+      border-left: 0;
+      border-top: 1px solid #fff;
+      top: 8px;
+      left: 34px;
+      content: ' ';
+    }
+    
+    .top-15px {
+      margin-top: -15px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+  a.vk-sign, a.gplus-sign {
+    min-width: 125px;
+  }
+  
+    span.loginInOr::before {
+      width: 110px;
+      height: 0;
+      border-left: 0;
+      border-top: 1px solid #fff;
+      top: 8px;
+      left: -120px;
+      content: ' ';
+    }
+    
+    span.loginInOr::after {
+      width: 110px;
+      height: 0;
+      border-left: 0;
+      border-top: 1px solid #fff;
+      top: 8px;
+      left: 34px;
+      content: ' ';
+    }
+}
+
+.vk-icon,
+.gplus-icon {
+  height: 42px;
+  margin-right: 10px;
+  width: 36px;
+  border-radius: 3px 0 0 3px;
+  color: #6E85B4;
+  float: left;
+  line-height: 14pt;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.loginInOr {
+  position: absolute;
+  left: 0;
+  top: 95px;
+}
+
+.loginInOr::before {
+  position: absolute;
+  height: 40px;
+  border-left: 1px solid #fff;
+  top: -42px;
+  left: 11px;
+  content: ' ';
+}
+
+.loginInOr::after {
+  position: absolute;
+  height: 42px;
+  border-left: 1px solid #fff;
+  top: 24px;
+  left: 11px;
+  content: ' ';
+}
+
+.signUpOrRecoverPwd {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.signUpOrRecoverPwd a {
+  color: white;
+  cursor: pointer;
+}
+
+.signUpOrRecoverPwd a:first-child {
+  margin-right: 8px;
+}
+
+.borderRadius4 {
+  border-radius: 4px!important;
+  -moz-border-radius: 4px!important;
+  -webkit-border-radius: 4px!important;
+}
+
+.g-recaptcha {
+  display: inline-block;
+}
+
+.matgin-top8 {
+  margin-top: 8px;
+}

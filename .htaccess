@@ -1,0 +1,46 @@
+AddDefaultCharset utf-8
+Options -Indexes
+ErrorDocument 404 /404.html
+php_flag magic_quotes_gpc Off
+php_flag log_errors on
+php_value error_log PHP_errors.log
+# supress php errors
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+
+<files "PHP_errors.log">
+Order Deny,Allow
+Deny from all
+</files>
+
+RewriteEngine on
+RewriteRule ^js\/([^/]+\.js)$ app/view/theme/js/$1
+RewriteRule ^css\/([^/]+\.css)$ app/view/theme/css/$1
+RewriteRule ^fonts\/([^/]+)$ app/view/theme/fonts/$1
+RewriteRule ^img\/(.*)$ app/view/theme/img/$1
+RewriteRule ^sounds\/(.*)$ app/view/widgets/sounds/$1
+RewriteRule ^404.html app/view/theme/404.html
+RewriteRule ^auth index.php?q=auth
+RewriteRule ^control-panel index.php?q=control-panel
+RewriteRule ^logout index.php?q=logout
+RewriteRule ^forgot index.php?q=forgot
+RewriteRule ^new-account index.php?q=new-account
+RewriteRule ^activate-email index.php?q=activate-email
+RewriteRule ^save-user-info index.php?q=save-user-info
+RewriteRule ^list-all-users index.php?q=list-all-users
+RewriteRule ^my-profile index.php?q=my-profile
+RewriteRule ^my-projects index.php?q=my-projects
+RewriteRule ^user-profile\/([\d]+) index.php?q=user-profile&uid=$1
+RewriteRule ^project-settings\/user\-([\d]+)\/project\-([\d]+) index.php?q=project-settings&uid=$1&pid=$2
+RewriteRule ^project-settings\/project\-([\d]+) index.php?q=project-settings&pid=$1
+RewriteRule ^fetch-contacts index.php?q=fetch-contacts
+RewriteRule ^question-solved index.php?q=question-solved
+RewriteRule ^save-project index.php?q=save-project
+RewriteRule ^json-widget-settings index.php?q=json-widget-settings
+RewriteRule ^gen-widget-js\/(\w{32})\.js index.php?q=gen-widget-js&apiKey=$1
+RewriteRule ^gen-code-widget index.php?q=gen-code-widget
+RewriteRule ^new-project index.php?q=new-project
+RewriteRule ^del-project index.php?q=del-project
